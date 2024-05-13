@@ -262,70 +262,7 @@ void consturcteur_murs_(){
 
 
 
-void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
-    char R;
-    char C=' '; 
-    char deplacement;
-    int a;
-    char w;
-    w=grille[but[joueur].robot1.y][but[joueur].robot1.x];
-    R=grille[but[joueur].robot1.y][but[joueur].robot1.x];
-    printf("tour du joueur n%c%d\n",167,joueur+1);
-    for (int j=tab_coup[joueur]; j>0; j--){
-        printf("vous avez %d coups\n",j);
-        do{
-            printf("donner votre direction (ZQSD)\n"); 
-            scanf(" %c", &deplacement); 
-        }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);
-        if(deplacement== 90 || deplacement==122){
-            printf("%c\n",grille[but[joueur].robot1.y][but[joueur].robot1.x]);
-            for(a=0; a<hauteur*2+1;a++){
-                if(grille[but[joueur].robot1.y -a][but[joueur].robot1.x] ==205){
-                    char c=C;
-                    C=grille[but[joueur].robot1.y -a+1][but[joueur].robot1.x];
-                    grille[but[joueur].robot1.y -a+1][but[joueur].robot1.x] =grille[but[joueur].robot1.y][but[joueur].robot1.x]; 
-                    grille[but[joueur].robot1.y][but[joueur].robot1.x] =c;
-                    but[joueur].robot1.y=but[joueur].robot1.y -a+1;
-                    a=hauteur*2+1;
-                }
-            }
-        }
-        if(deplacement== 81 || deplacement== 113){
-            for(a=0; a<2*largeur+1;a++){
-                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a]==186){
-                    char c=C;
-                    C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a+1];
-                    grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a+1] = grille[ but[joueur].robot1.y ][ but[joueur].robot1.x];
-                    grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;
-                    but[joueur].robot1.x = but[joueur].robot1.x-a+1;
-                    a=largeur*2+1;
-                }
-            }
-        }
-        if(deplacement== 83 || deplacement== 115){
-            for(a=0; a<2*hauteur+1;a++){
-                if(grille[ but[joueur].robot1.y+a ][but[joueur].robot1.x]==205){
-                    char c=C;
-                    C=grille[ but[joueur].robot1.y+a-1][but[joueur].robot1.x];
-                    grille[ but[joueur].robot1.y+a-1][but[joueur].robot1.x]=grille[but[joueur].robot1.y][but[joueur].robot1.x];
-                    grille[ but[joueur].robot1.y][but[joueur].robot1.x]=c;
-                    but[joueur].robot1.y=but[joueur].robot1.y+a-1;
-                    a=hauteur*2+1;
-                }
-            }
-        }
-        if(deplacement== 68 || deplacement== 100){
-            for(a=0; a<2*largeur+1;a++){
-                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a]==186){
-                    char c=C;
-                    C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1];
-                    grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1] = grille[ but[joueur].robot1.y ][ but[joueur].robot1.x];
-                    grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;
-                    but[joueur].robot1.x=but[joueur].robot1.x +a-1;
-                    a=largeur*2-1;
-                }
-            }
-        }
+
         affiche_grille();
         if(grille[but[joueur].cible1.y][but[joueur].cible1.x]==w){
             printf("le robot %c est sur la cible, vous gagner 1 point.\n",grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
@@ -337,32 +274,3 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     }
 }
 
-void jouer(int* tab_coup, int nb_joueur){
-    printf("le déplacement du robot ce fait avec les touche Z(haut) Q(gauche) S(bas) D(droite)\n"); 
-    printf("le jeu commence!!!!\n");
-    jouer_coup(tab_coup,nb_joueur, premier_joueur);
-    for(int i=0; i<nb_joueur;i++){
-        if(i!=premier_joueur){
-            jouer_coup(tab_coup, nb_joueur,i);
-        }
-    }
-    printf("la partie est termine\n");
-    for(int j=0; j<nb_joueur;j++){
-        printf("joueur %d %c %d point\n",j+1,133,tab_point[j]);
-    }
-}
-
-void gagnant(int nb_joueur){
-    int a=0;
-    int j=0; 
-    for(int i=0; i<nb_joueur;i++){
-        if(a>tab_point[i]){
-            a=tab_point[i];
-            j=i;
-        }
-    }
-    if(a=0){
-        printf("Il n'y a pas de gagnant.\n");
-    }
-    printf("Le gagnant est le joueur n%c%d, avec %d points.\n",167,j+1,a); 
-}
