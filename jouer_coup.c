@@ -1,3 +1,6 @@
+#include "display.h"
+
+
 void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     char R;
     char C=' '; 
