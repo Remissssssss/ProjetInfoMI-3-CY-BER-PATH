@@ -1,23 +1,51 @@
 #include display.c
 int main(){
-    srand(time(NULL)); 
+    srand(time(NULL));
+
+    Point *cible;
+    Point *robot;
+    int nb_joueur = meilleur_scan("Combien de joueurs participent, un minimum de 2 joueurs est requis\n",2);
+    int nb_manche= meilleur_scan("Combien de manches voulez vous faire",0);
+    tab_point= malloc(nb_joueur*sizeof(int));
+    if (tab_point==NULL){
+        printf("erreur allocation de m%cmoire",130);
+        exit(3);
+    }
+    for(int i=0; i<nb_manche; i++){
     constructeur_grille();
+    cible=malloc(sizeof(Point)*18);
+    if (cible==NULL){
+        printf("erreur allocation de m%cmoire",130);
+        exit(3);
+    }
+    robot=malloc(sizeof(Point)*nb_joueur);
+    if (robot==NULL){
+        printf("erreur allocation de m%cmoire",130);
+        exit(3);
+    }
+    tab_point=malloc(sizeof(int)*nb_joueur);
+    if (robot==NULL){
+        printf("erreur allocation de m%cmoire",130);
+        exit(3);
+    }
     printf("largeur: %d\n",largeur);
     printf ("hauteur: %d\n",hauteur);
-    // grille[3][6]=186;
-    // grille[3][7]='R';
-    // grille[4][7]=205;
-    // grille[3][12] = 186;
-    // grille[3][11] = 'R';
-    // grille[4][11] = 205;
-    // grille[3][16] = 186;
-    // grille[2][15] = 205;
-    // grille[3][15] = 'R';
-    // grille[3][20] = 186;
-    // grille[2][21] = 205;
-    // grille[3][21] = 184;
     consturcteur_murs_contour();
+    constructeur_cible1(0,18,cible);
+
+    constructeur_cible1(0,nb_joueur,robot);
+    consturcteur_murs_();
     affiche_grille();
-    free(grille); 
+    int* tab_coup = info_joueurs(nb_joueur,cible,robot);
+    //printf("%d",premier_joueur);
+    //printf("\n%c   %c\n",grille[but[0].robot1.y][but[0].robot1.x],grille[but[0].cible1.y][but[0].cible1.x]);
+    jouer(tab_coup,nb_joueur);
+    free(grille);
+    free(robot);
+    free(cible);
+    free(tab_coup);
+    free(but);
+    }
+    gagnant(nb_joueur); 
     return 0; 
 }
