@@ -1,3 +1,6 @@
+#include "display.h"
+
+
 void consturcteur_murs_(){
     int a; 
     int b; 
