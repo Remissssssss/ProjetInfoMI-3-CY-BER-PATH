@@ -1,5 +1,5 @@
 #include "display.h"
-#ifndef affgrille
-#define affgrille
+#ifndef aaafiche.h
+#define aaafiche.h
 void affiche_grille();
 #endif

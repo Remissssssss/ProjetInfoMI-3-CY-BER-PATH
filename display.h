@@ -1,5 +1,5 @@
-#ifndef display
-#define dislpay
+#ifndef DISPLAY_H
+#define DISPLAY_H
 
 #include <stdio.h>                      //pour faire le cadrillage
 #include <stdlib.h>

@@ -1,6 +1,6 @@
 #include "display.h"
-#ifndef murs
-#define murs
+#ifndef aamurs.h
+#define aamurs.h
 void consturcteur_murs_();
 #endif
 

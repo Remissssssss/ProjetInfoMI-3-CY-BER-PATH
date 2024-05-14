@@ -1,5 +1,5 @@
 #include "display.h"
-#ifndef grille
-#define grille
+#ifndef aagrille.h
+#define aagrille.h
 void estetique_murs_coin(int i, int j);
 #endif

@@ -1,5 +1,5 @@
 #include "display.h"
-#ifndef contour
-#define contour
+#ifndef aacontour.h
+#define aacontour.h
 void consturcteur_murs_contour();
 #endif
