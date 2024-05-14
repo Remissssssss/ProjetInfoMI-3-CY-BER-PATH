@@ -1,4 +1,13 @@
-#include display.h
+#include "display.h"
+#include "aaafiche.h"
+#include "aacible.h"
+#include "aacontours.h"
+#include "aagrille.h"
+#include "aajouer_coup.h"
+#include "jouer_gagnant.h"
+#include "murs.h"
+
+
 void jouer(int* tab_coup, int nb_joueur){
     printf("le déplacement du robot ce fait avec les touche Z(haut) Q(gauche) S(bas) D(droite)\n"); 
     printf("le jeu commence!!!!\n");
