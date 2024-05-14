@@ -1,4 +1,4 @@
-
+#include "display.h"
 
 
 affiche_grille();
