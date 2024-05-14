@@ -1,4 +1,4 @@
-
+#include "display.h"
 void constructeur_grille(){
     largeur= rand()%6+15;
     hauteur= rand()%6+15;
