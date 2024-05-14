@@ -1,4 +1,11 @@
 #include "display.h"
+#include "aaafiche.h"
+#include "aacible.h"
+#include "aacontours.h"
+#include "aagrille.h"
+#include "aajouer_coup.h"
+#include "jouer_gagnant.h"
+#include "murs.h"
 
 
 char constructeur_cible1(int i, int max, Point* cible){
