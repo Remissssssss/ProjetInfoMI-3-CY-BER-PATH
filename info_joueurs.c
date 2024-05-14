@@ -4,8 +4,8 @@
 #include "aacontours.h"
 #include "aagrille.h"
 #include "aajouer_coup.h"
-#include "jouer_gagnant.h"
-#include "murs.h"
+#include "aajouer_gagnant.h"
+#include "aamurs.h"
 
 
 int* info_joueurs(int nb_joueur,Point *cible, Point *robot){ 
