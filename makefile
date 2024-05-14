@@ -1,17 +1,16 @@
+CC = gcc
+SRC =$(wildcard *.c)
+HEADER =$(wildcard *.h)
+OBJ =$(SRC:.c=.o)
+
 all: exec
 
-display.o : display.c display.h params.h
-			gcc -c display.c -o display.o
+%.o : %.c $(HEADER)
+		$(CC) -c $< -o $@
 
-
-main.o : main.c main.h params.h
-			gcc -c main.c -o main.o
-
-
-exec : main.o func.o display.o
-			gcc -c main.o func.o display.o -o exec
-
+exec: $(OBJ)
+		$(CC) $^ -o $@
 
 clean:
-    rm -f *.o
+	rm -f *.o
 	rm -f exec
