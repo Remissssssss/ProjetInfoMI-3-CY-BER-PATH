@@ -5,7 +5,7 @@
 #include "aagrille.h"
 #include "aajouer_coup.h"
 #include "aajouer_gagnant.h"
-#include "murs.h"
+#include "aamurs.h"
 
 
 void affiche_grille() {// écrire la grille
