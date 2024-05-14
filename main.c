@@ -1,4 +1,5 @@
-#include display.c
+#include display.h
+#include Jouer_coup.h
 int main(){
     srand(time(NULL));
 
