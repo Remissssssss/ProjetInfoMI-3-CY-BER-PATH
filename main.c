@@ -1,5 +1,13 @@
-#include display.h
-#include Jouer_coup.h
+#include "display.h"
+#include "aaafiche.h"
+#include "aacible.h"
+#include "aacontours.h"
+#include "aagrille.h"
+#include "aajouer_coup.h"
+#include "jouer_gagnant.h"
+#include "murs.h"
+
+
 int main(){
     srand(time(NULL));
 
