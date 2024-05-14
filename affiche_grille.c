@@ -1,3 +1,6 @@
+#include "display.h"
+
+
 void affiche_grille() {// écrire la grille
     for (int i = 0; i < 2*hauteur+1; i++) {
             for (int j = 0; j < 2*largeur+1; j++) { 
