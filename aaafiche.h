@@ -1,6 +1,7 @@
 
 
 #ifndef aaafiche_h
+#define aaafiche_h
 #include "display.h"
 #include "aacible.h"
 #include "aacontours.h"
@@ -9,6 +10,6 @@
 #include "aajouer_gagnant.h"
 #include "aamurs.h"
 
-#define aaafiche_h
+
 void affiche_grille();
 #endif

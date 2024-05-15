@@ -1,5 +1,6 @@
 
 #ifndef aamurs_h
+#define aamurs_h
 
 #include "display.h"
 #include "aaafiche.h"
@@ -9,7 +10,7 @@
 #include "aajouer_coup.h"
 #include "aajouer_gagnant.h"
 
-#define aamurs_h
+
 void consturcteur_murs_();
 #endif
 

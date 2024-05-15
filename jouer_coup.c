@@ -21,7 +21,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     for (int j=tab_coup[joueur]; j>0; j--){
         printf("vous avez %d coups\n",j);
         do{
-            printf("votre cible est %c%c\n", grille[but[joueur].cible1.y][but[joueur].cible1.x]);
+            printf("votre cible est %c\n", grille[but[joueur].cible1.y][but[joueur].cible1.x]);
             printf("donner votre direction (ZQSD)\n"); 
             scanf(" %c", &deplacement); 
         }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);

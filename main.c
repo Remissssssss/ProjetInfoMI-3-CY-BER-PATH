@@ -7,6 +7,19 @@
 #include "aajouer_gagnant.h"
 #include "aamurs.h"
 
+int meilleur_scan(char * message, int min){
+    int ret_var = 0;
+    int value = min -1;
+    while (value < min || ret_var != 1)
+    {   
+        printf("%s", message);
+        ret_var = scanf("%d",&value);
+        while (getchar()!='\n'){}
+
+    }
+    return value;
+
+}
 
 int main(){
     srand(time(NULL));
