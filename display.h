@@ -18,16 +18,16 @@ typedef struct But{
     Point cible1;
 }But;
 
-int* tab_point; 
-unsigned char**grille;
-int largeur;
-int hauteur;
-But *but;
-int premier_joueur;
+extern int* tab_point; 
+extern unsigned char**grille;
+extern int largeur;
+extern int hauteur;
+extern But *but;
+extern int premier_joueur;
 
 int meilleur_scan(char * message, int min);
 
-
+int* info_joueurs(int nb_joueur,Point *cible, Point *robot);
 
 
 #endif 

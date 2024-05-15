@@ -7,6 +7,13 @@
 #include "aajouer_gagnant.h"
 #include "aamurs.h"
 
+int* tab_point; 
+unsigned char**grille;
+int largeur;
+int hauteur;
+But *but;
+int premier_joueur;
+
 int meilleur_scan(char * message, int min){
     int ret_var = 0;
     int value = min -1;

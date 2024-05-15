@@ -8,6 +8,7 @@
 #include "aamurs.h"
 
 
+
 int* info_joueurs(int nb_joueur,Point *cible, Point *robot){ 
     int* tab_coup = (int*)malloc(sizeof(int)*nb_joueur);
     if (tab_coup == NULL) {

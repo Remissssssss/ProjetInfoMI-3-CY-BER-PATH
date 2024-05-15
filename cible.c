@@ -8,6 +8,7 @@
 #include "aamurs.h"
 
 
+
 char constructeur_cible1(int i, int max, Point* cible){
     if(i==max){
         return 0;

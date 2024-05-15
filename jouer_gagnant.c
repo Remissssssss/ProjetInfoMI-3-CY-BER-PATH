@@ -8,6 +8,7 @@
 #include "aamurs.h"
 
 
+
 void jouer(int* tab_coup, int nb_joueur){
     printf("le déplacement du robot ce fait avec les touche Z(haut) Q(gauche) S(bas) D(droite)\n"); 
     printf("le jeu commence!!!!\n");
