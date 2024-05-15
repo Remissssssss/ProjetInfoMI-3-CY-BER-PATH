@@ -32,7 +32,7 @@ void gagnant(int nb_joueur){
             j=i;
         }
     }
-    if(a=0){
+    if(a==0){
         printf("Il n'y a pas de gagnant.\n");
     }
     printf("Le gagnant est le joueur n%c%d, avec %d points.\n",167,j+1,a); 
