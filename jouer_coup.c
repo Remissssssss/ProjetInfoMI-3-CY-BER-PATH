@@ -18,6 +18,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     printf("tour du joueur n%c%d\n",167,joueur+1);
     for (int j=tab_coup[joueur]; j>0; j--){
         printf("vous avez %d coups\n",j);
+        printf("votre cible est %c", grille[robot[].y][robot[].x); 
         do{
             printf("donner votre direction (ZQSD)\n"); 
             scanf(" %c", &deplacement); 
