@@ -1,12 +1,3 @@
-#include "display.h"
-#include "aaafiche.h"
-#include "aacible.h"
-#include "aacontours.h"
-#include "aagrille.h"
-#include "aajouer_coup.h"
-#include "aajouer_gagnant.h"
-#include "aamurs.h"
-
 void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     char R;
     char C=' '; 
@@ -18,8 +9,8 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     printf("tour du joueur n%c%d\n",167,joueur+1);
     for (int j=tab_coup[joueur]; j>0; j--){
         printf("vous avez %d coups\n",j);
-        printf("votre cible est %c", grille[robot[].y][robot[].x); 
         do{
+            printf("votre cible est %c%c\n", grille[but[joueur].cible1.y][but[joueur].cible1.x]);
             printf("donner votre direction (ZQSD)\n"); 
             scanf(" %c", &deplacement); 
         }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);
