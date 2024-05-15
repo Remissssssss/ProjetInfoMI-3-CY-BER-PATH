@@ -1,2 +1,3 @@
 *.o
 *.meilleur_scan
+.vscode/
