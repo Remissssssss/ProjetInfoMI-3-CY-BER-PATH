@@ -14,7 +14,7 @@ int main(){
     Point *cible;
     Point *robot;
     int nb_joueur = meilleur_scan("Combien de joueurs participent, un minimum de 2 joueurs est requis\n",2);
-    int nb_manche= meilleur_scan("Combien de manches voulez vous faire",0);
+    int nb_manche= meilleur_scan("Combien de manches voulez vous faire\n",0);
     tab_point= malloc(nb_joueur*sizeof(int));
     if (tab_point==NULL){
         printf("erreur allocation de m%cmoire",130);
