@@ -24,7 +24,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             printf("votre cible est %c\n", grille[but[joueur].cible1.y][but[joueur].cible1.x]);
             printf("donner votre direction (ZQSD)\n"); 
             scanf(" %c", &deplacement); 
-        }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);
+        }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);// 90=Z; 122=z;81=Q;113=q;83=S
         if(deplacement== 90 || deplacement==122){
             printf("%c\n",grille[but[joueur].robot1.y][but[joueur].robot1.x]);
             for(a=0; a<hauteur*2+1;a++){
@@ -81,10 +81,15 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
         affiche_grille();
         if(grille[but[joueur].cible1.y][but[joueur].cible1.x]==w){
             printf("le robot %c est sur la cible, vous gagner 1 point.\n",grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
-            tab_point[joueur-1]+=1;
+            tab_point[joueur]+=1;
+            return ;
         }
     }
-    if(grille[but[joueur].cible1.y][but[joueur].cible1.x]!=w){
-         printf("le robot %c n'est pas sur la cible,donc pas de point.\n", grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
-    }
+      printf("le robot %c n'est pas sur la cible,donc pas de point.\n", grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
+      for(int i=0; i<nb_joueur;i++){
+        if(i!=joueur){
+            tab_point[i]++;
+        }
+      }
+    
 }

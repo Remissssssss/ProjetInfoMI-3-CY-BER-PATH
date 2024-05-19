@@ -25,16 +25,13 @@ void jouer(int* tab_coup, int nb_joueur){
 }
 
 void gagnant(int nb_joueur){
-    int a=0;
+    int a=tab_point[0];
     int j=0; 
     for(int i=0; i<nb_joueur;i++){
-        if(a>tab_point[i]){
+        if(a<tab_point[i]){
             a=tab_point[i];
             j=i;
         }
-    }
-    if(a==0){
-        printf("Il n'y a pas de gagnant.\n");
     }
     printf("Le gagnant est le joueur n%c%d, avec %d points.\n",167,j+1,a); 
 }
