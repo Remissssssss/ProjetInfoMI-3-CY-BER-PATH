@@ -17,7 +17,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
     char w;
     w=grille[but[joueur].robot1.y][but[joueur].robot1.x];
     R=grille[but[joueur].robot1.y][but[joueur].robot1.x];
-    printf("\n \n                              tour du joueur n%c%d\n\n",167,joueur+1);
+    printf("\n \n                                tour du joueur n%c%d\n\n",167,joueur+1); // les espaces sont fait pour l'éstétiques
     for (int j=tab_coup[joueur]; j>0; j--){
         printf("vous avez %d coups\n",j);
         do{

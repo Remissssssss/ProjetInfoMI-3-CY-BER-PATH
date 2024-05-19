@@ -26,10 +26,9 @@ int* info_joueurs(int nb_joueur,Point *cible, Point *robot){
         tab_point[i]=0; 
         int nbr_tour;
         a=rand()%18;
-        do{
             printf("Joueurs n%c %d est le robot: \033[91m%c\033[0m.\nEn combien de coups pensez-vous toucher la cible \033[92m%c \033[0m\n",167, i+1,grille[robot[i].y][robot[i].x],grille[cible[a].y][cible[a].x]);
-            scanf("%d", &nbr_tour);
-        }while(nbr_tour<0);
+            nbr_tour=meilleur_scan("Coups : ",1 );
+
         tab_coup[i]= nbr_tour;
         if (tab_coup[i] < minTours) {
             minTours = tab_coup[i];
