@@ -30,6 +30,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             for(a=0; a<hauteur*2+1;a++){
                 if(grille[but[joueur].robot1.y -a][but[joueur].robot1.x] ==205){
                     char c=C;
+                    if(a==1){break;}
                     C=grille[but[joueur].robot1.y -a+1][but[joueur].robot1.x];
                     grille[but[joueur].robot1.y -a+1][but[joueur].robot1.x] =grille[but[joueur].robot1.y][but[joueur].robot1.x]; 
                     grille[but[joueur].robot1.y][but[joueur].robot1.x] =c;
@@ -42,6 +43,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             for(a=0; a<2*largeur+1;a++){
                 if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a]==186){
                     char c=C;
+                    if(a==1){break;}
                     C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a+1];
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a+1] = grille[ but[joueur].robot1.y ][ but[joueur].robot1.x];
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;
@@ -54,6 +56,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             for(a=0; a<2*hauteur+1;a++){
                 if(grille[ but[joueur].robot1.y+a ][but[joueur].robot1.x]==205){
                     char c=C;
+                    if(a==1){break;}
                     C=grille[ but[joueur].robot1.y+a-1][but[joueur].robot1.x];
                     grille[ but[joueur].robot1.y+a-1][but[joueur].robot1.x]=grille[but[joueur].robot1.y][but[joueur].robot1.x];
                     grille[ but[joueur].robot1.y][but[joueur].robot1.x]=c;
@@ -66,6 +69,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             for(a=0; a<2*largeur+1;a++){
                 if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a]==186){
                     char c=C;
+                    if(a==1){break;}
                     C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1];
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1] = grille[ but[joueur].robot1.y ][ but[joueur].robot1.x];
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;

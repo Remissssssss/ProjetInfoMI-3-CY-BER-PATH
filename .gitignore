@@ -1,3 +1,4 @@
 *.o
 *.meilleur_scan
 .vscode/
+.vscode/settings.json
