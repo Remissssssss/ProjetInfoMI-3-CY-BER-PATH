@@ -85,6 +85,7 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             return ;
         }
     }
+      //on n'a pas besoin de conditions if car si on sort de la boucle juste au dessus l'utilisateur n'a pas gagner de pts
       printf("le robot %c n'est pas sur la cible,donc pas de point.\n", grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
       for(int i=0; i<nb_joueur;i++){
         if(i!=joueur){
