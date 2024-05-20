@@ -12,14 +12,21 @@
 void jouer(int* tab_coup, int nb_joueur){
     printf("le déplacement du robot ce fait avec les touche Z(haut) Q(gauche) S(bas) D(droite)\n"); 
     printf("le jeu commence!!!!\n");
-    jouer_coup(tab_coup,nb_joueur, premier_joueur);
-    for(int i=0; i<nb_joueur;i++){
-        if(i!=premier_joueur){
-            jouer_coup(tab_coup, nb_joueur,i);
+    int a=tab_coup[0];
+    for(int i=1; i<nb_joueur;i++){
+        if(tab_coup[i]>a){                  // on cherche le joueur avec le plus grands nombre de coups
+            a=tab_coup[i];
+        }
+    }
+    for(int k=1; k<=a; k++){
+        for(int i=0;i<nb_joueur;i++){
+            if(tab_coup[i]==k){                 // on part de 1(le min) à a (le max) puis je cherhce dans la liste des joueurs et on les classes dans l'ordre croissant
+               jouer_coup(tab_coup, nb_joueur,i);
+            }
         }
     }
     printf("la partie est termine\n");
-    for(int j=0; j<nb_joueur;j++){
+    for(int j=0; j<nb_joueur;j++){                      
         printf("joueur %d %c %d point\n",j+1,133,tab_point[j]);
     }
 }

@@ -40,6 +40,9 @@ int main(){
         printf("erreur allocation de m%cmoire",130);
         exit(3);
     }
+    for(int i=0; i<nb_joueur; i++){
+        tab_point[i]=0; 
+    }
     for(int i=0; i<nb_manche; i++){
         constructeur_grille();
         cible=malloc(sizeof(Point)*18);
@@ -48,11 +51,6 @@ int main(){
             exit(3);
         }
         robot=malloc(sizeof(Point)*nb_joueur);
-        if (robot==NULL){
-            printf("erreur allocation de m%cmoire",130); // 130=é
-            exit(3);
-        }
-        tab_point=malloc(sizeof(int)*nb_joueur);
         if (robot==NULL){
             printf("erreur allocation de m%cmoire",130); // 130=é
             exit(3);
@@ -76,5 +74,6 @@ int main(){
         free(but);
     }
     gagnant(nb_joueur); 
+    free(tab_point);
     return 0; 
 }
