@@ -30,60 +30,60 @@ void constructeur_grille(){
             if(j%2 !=0){
                 grille[i][j] = ' ';
                 if(i%2==0){
-                    grille[i][j] = 196;
+                    grille[i][j] = 196;         // 196= ─
                 }
             }
             else if(j%2==0){
-                grille[i][j] = 197;
-                if(i%2!=0){
-                    grille[i][j]= 179;
+                grille[i][j] = 197;           // 197= ┼
+                if(i%2!=0){ 
+                    grille[i][j]= 179;       // 179= ▒
                 }
             }
-            grille[0][j] = 205;
+            grille[0][j] = 205;             // 205= ═
             if (i==2*hauteur){
-                grille[i][j] = 205;
+                grille[i][j] = 205;       // 205= ═
             }
         }
-        grille[i][0]=186;
-        grille[i][2*largeur]=186;
+        grille[i][0]=186;                // 186= ║
+        grille[i][2*largeur]=186;       // 186= ║
     }
-    grille[0][0]= 201;
-    grille[0][2*largeur] = 187;
-    grille[hauteur*2][0] = 200;
-    grille[hauteur*2][2*largeur]= 188;
+    grille[0][0]= 201;                   // 201= ╔
+    grille[0][2*largeur] = 187;         // 187= ╗
+    grille[hauteur*2][0] = 200;         // 200= ╚ 
+    grille[hauteur*2][2*largeur]= 188;  // 188= ╝ 
 }
 
 //permet d'avoir des coins pour les murs
 void estetique_murs_coin(int i, int j){
-    if(grille[i][j]==186){
-        if(grille[i+1][j+1]==205){
-            grille[i+1][j]=200;
+    if(grille[i][j]==186){               // 186= ║
+        if(grille[i+1][j+1]==205){      // 205= ═
+            grille[i+1][j]=200;         // 200= ╚
         }
-        else if(grille[i+1][j-1]==205){
-            grille[i+1][j]=188;
+        else if(grille[i+1][j-1]==205){ // 205= ═
+            grille[i+1][j]=188;         // 188= ╝
         }
     }
-    if(i==0 && grille[i+1][j+1]==186 && j<2*largeur-1){
-        grille[i][j+1]=203;
+    if(i==0 && grille[i+1][j+1]==186 && j<2*largeur-1){ // 186= ║
+        grille[i][j+1]=203;    // 203= ╦ 
     }
     if(i==2*hauteur && grille[i-1][j+1]==186 && j<2*largeur-1){
-        grille[i][j+1]=202;
+        grille[i][j+1]=202;     // 202= ╩ 
     }
-    if(i>0 && grille[i][j+1]==205){
+    if(i>0 && grille[i][j+1]==205){ // 205= ═
         if(i<hauteur*2){
-            if (grille[i+1][j+2]==186){
-                if(grille[i-1][j+2]==186){
-                    grille[i][j+2]=185;
+            if (grille[i+1][j+2]==186){ // 186= ║
+                if(grille[i-1][j+2]==186){ // 186= ║
+                    grille[i][j+2]=185; // 185= ╣
                 }
                 else{
-                    grille[i][j+2]=187;
+                    grille[i][j+2]=187; // 187= ╗
                 }
             }
-            if(grille[i+1][j]==186){
-                grille[i][j]=201;
+            if(grille[i+1][j]==186){        // 186= ║
+                grille[i][j]=201;           // 201= ╔ 
             }
-            if(grille[i-1][j]== 186 && grille[i+1][j]==186){
-                grille[i][j]=204; 
+            if(grille[i-1][j]== 186 && grille[i+1][j]==186){ // 186= ║
+                grille[i][j]=204;               // 204= ╠
             }
         }
     }

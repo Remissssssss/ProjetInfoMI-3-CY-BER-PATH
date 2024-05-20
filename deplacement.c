@@ -24,11 +24,11 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
             printf("votre cible est %c\n", grille[but[joueur].cible1.y][but[joueur].cible1.x]);
             printf("donner votre direction (ZQSD)\n"); 
             scanf(" %c", &deplacement); 
-        }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);// 90=Z; 122=z;81=Q;113=q;83=S
-        if(deplacement== 90 || deplacement==122){
+        }while(deplacement!= 90 && deplacement!=122 && deplacement!= 81 && deplacement!= 113 && deplacement!= 83 && deplacement!= 115 && deplacement!= 68 && deplacement!= 100);// 90=Z; 122=z; 81=Q; 113=q; 83=S, 115=s, 68=D, 100=d
+        if(deplacement== 90 || deplacement==122){ // 90= Z , 122=z
             printf("%c\n",grille[but[joueur].robot1.y][but[joueur].robot1.x]);
             for(a=0; a<hauteur*2+1;a++){
-                if(grille[but[joueur].robot1.y -a][but[joueur].robot1.x] ==205){
+                if(grille[but[joueur].robot1.y -a][but[joueur].robot1.x] ==205){ // 205= ═
                     char c=C;
                     if(a==1){break;}
                     C=grille[but[joueur].robot1.y -a+1][but[joueur].robot1.x];
@@ -39,9 +39,9 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
                 }
             }
         }
-        if(deplacement== 81 || deplacement== 113){
+        if(deplacement== 81 || deplacement== 113){ // 81=Q, 113=q
             for(a=0; a<2*largeur+1;a++){
-                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a]==186){
+                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a]==186){ // 186= ║
                     char c=C;
                     if(a==1){break;}
                     C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x-a+1];
@@ -52,9 +52,9 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
                 }
             }
         }
-        if(deplacement== 83 || deplacement== 115){
+        if(deplacement== 83 || deplacement== 115){ // 83=S, 115=s
             for(a=0; a<2*hauteur+1;a++){
-                if(grille[ but[joueur].robot1.y+a ][but[joueur].robot1.x]==205){
+                if(grille[ but[joueur].robot1.y+a ][but[joueur].robot1.x]==205){  // 205= ═
                     char c=C;
                     if(a==1){break;}
                     C=grille[ but[joueur].robot1.y+a-1][but[joueur].robot1.x];
@@ -65,10 +65,10 @@ void jouer_coup(int* tab_coup, int nb_joueur,int joueur){
                 }
             }
         }
-        if(deplacement== 68 || deplacement== 100){
+        if(deplacement== 68 || deplacement== 100){ // 68=D , 100=d
             for(a=0; a<2*largeur+1;a++){
-                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a]==186){
-                    char c=C;
+                if(grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a]==186){ // 186= ║
+                    char c=C; 
                     if(a==1){break;}
                     C=grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1];
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x +a-1] = grille[ but[joueur].robot1.y ][ but[joueur].robot1.x];
