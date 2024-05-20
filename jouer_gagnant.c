@@ -27,11 +27,21 @@ void jouer(int* tab_coup, int nb_joueur){
 void gagnant(int nb_joueur){
     int a=tab_point[0];
     int j=0; 
+    int r=0;
     for(int i=0; i<nb_joueur;i++){
         if(a<tab_point[i]){
             a=tab_point[i];
-            j=i;
+            j=i;                    // plus max de pts et son indice
         }
     }
+      for(int i=0; i<nb_joueur;i++){
+        if(a==tab_point[i]){
+            r++;                    // parcours les pts pour savoir combien de joueurs ont le maximum de pts
+        }
+    }
+    if(r==1){           // si 1 seule prsn a le max de pts alors c'est le gagant
     printf("Le gagnant est le joueur n%c%d, avec %d points.\n",167,j+1,a); 
+    } else {                        //  il y a donc égalité
+        printf("égalité!\n"); 
+}
 }
