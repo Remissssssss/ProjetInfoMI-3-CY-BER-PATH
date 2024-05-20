@@ -9,7 +9,7 @@
 
 
 
-void jouer(int* tab_coup, int nb_joueur){
+void classement(int* tab_coup, int nb_joueur){
     printf("le déplacement du robot ce fait avec les touche Z(haut) Q(gauche) S(bas) D(droite)\n"); 
     printf("le jeu commence!!!!\n");
     int a=tab_coup[0];
@@ -21,7 +21,7 @@ void jouer(int* tab_coup, int nb_joueur){
     for(int k=1; k<=a; k++){
         for(int i=0;i<nb_joueur;i++){
             if(tab_coup[i]==k){                 // on part de 1(le min) à a (le max) puis je cherhce dans la liste des joueurs et on les classes dans l'ordre croissant
-               jouer_coup(tab_coup, nb_joueur,i);
+               deplacement(tab_coup, nb_joueur,i);
             }
         }
     }

@@ -9,7 +9,7 @@
 
 
 
-void constructeur_grille(){
+void constructeurGrille(){
     largeur= rand()%6+15;
     hauteur= rand()%6+15;
 // allocation de mémoire de la grille
@@ -54,7 +54,7 @@ void constructeur_grille(){
 }
 
 //permet d'avoir des coins pour les murs
-void estetique_murs_coin(int i, int j){
+void estetiqueCoin(int i, int j){
     if(grille[i][j]==186){               // 186= ║
         if(grille[i+1][j+1]==205){      // 205= ═
             grille[i+1][j]=200;         // 200= ╚

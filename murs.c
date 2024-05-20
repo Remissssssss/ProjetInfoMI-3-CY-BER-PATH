@@ -8,7 +8,7 @@
 #include "aamurs.h"
 
 
-void consturcteur_murs_(){
+void constructeurMurs(){
     int a; 
     int b; 
     for(int i=0; i<2* hauteur+1;i++){

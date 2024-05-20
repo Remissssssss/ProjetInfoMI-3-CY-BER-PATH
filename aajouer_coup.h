@@ -9,5 +9,5 @@
 #include "aajouer_gagnant.h"
 #include "aamurs.h"
 
-void jouer_coup(int* tab_coup, int nb_joueur,int joueur);
+void deplacement(int* tab_coup, int nb_joueur,int joueur);
 #endif

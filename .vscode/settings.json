@@ -10,7 +10,8 @@
     "tuple": "c",
     "type_traits": "c",
     "utility": "c",
-    "aacontours.h": "c"
+    "aacontours.h": "c",
+    "display.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",

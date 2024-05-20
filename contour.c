@@ -9,7 +9,7 @@
 
 
 
-void consturcteur_murs_contour(){
+void consturcteurContour(){
     int i;
     int a;
     do{

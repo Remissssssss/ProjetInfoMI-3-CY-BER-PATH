@@ -44,7 +44,7 @@ int main(){
         tab_point[i]=0; 
     }
     for(int i=0; i<nb_manche; i++){
-        constructeur_grille();
+        constructeurGrille();
         cible=malloc(sizeof(Point)*18);
         if (cible==NULL){
             printf("erreur allocation de m%cmoire",130); // 130=é
@@ -57,16 +57,16 @@ int main(){
         }
         printf("largeur: %d\n",largeur);
         printf ("hauteur: %d\n",hauteur);
-        consturcteur_murs_contour();
-        constructeur_cible1(0,18,cible);
+        consturcteurContour();
+        constructeurCible(0,18,cible);
 
-        constructeur_cible1(0,nb_joueur,robot);
-        consturcteur_murs_();
-        affiche_grille();
+        constructeurCible(0,nb_joueur,robot);
+        constructeurMurs();
+        afficheGrille();
         int* tab_coup = info_joueurs(nb_joueur,cible,robot);
         //printf("%d",premier_joueur);
         //printf("\n%c   %c\n",grille[but[0].robot1.y][but[0].robot1.x],grille[but[0].cible1.y][but[0].cible1.x]);
-        jouer(tab_coup,nb_joueur);
+        classement(tab_coup,nb_joueur);
         free(grille);
         free(robot);
         free(cible);

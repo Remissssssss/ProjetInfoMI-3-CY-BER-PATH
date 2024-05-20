@@ -9,7 +9,7 @@
 #include "aamurs.h"
 
 
-char constructeur_cible1(int i, int max, Point* cible);
+char constructeurCible(int i, int max, Point* cible);
 #endif
 
 

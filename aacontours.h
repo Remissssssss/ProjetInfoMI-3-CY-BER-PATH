@@ -9,5 +9,5 @@
 #include "aajouer_gagnant.h"
 #include "aamurs.h"
 
-void consturcteur_murs_contour();
+void consturcteurContour();
 #endif

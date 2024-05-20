@@ -11,6 +11,6 @@
 #include "aajouer_gagnant.h"
 
 
-void consturcteur_murs_();
+void constructeurMurs();
 #endif
 

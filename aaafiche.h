@@ -11,5 +11,5 @@
 #include "aamurs.h"
 
 
-void affiche_grille();
+void afficheGrille();
 #endif

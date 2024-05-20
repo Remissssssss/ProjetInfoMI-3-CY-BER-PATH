@@ -9,10 +9,10 @@
 
 
 
-void affiche_grille() {// écrire la grille
+void afficheGrille() {// écrire la grille
     for (int i = 0; i < 2*hauteur+1; i++) {
             for (int j = 0; j < 2*largeur+1; j++) { 
-                estetique_murs_coin(i,j);
+                estetiqueCoin(i,j);
 // affichage ligne et colonnes avec les murs
                 if (j%2!=0  &&  i%2==0 && i>0 && i<2*hauteur){
                     if (grille[i][j]==205){ // 205= ═
