@@ -11,7 +11,9 @@
     "type_traits": "c",
     "utility": "c",
     "aacontours.h": "c",
-    "display.h": "c"
+    "display.h": "c",
+    "aacible.h": "c",
+    "!affichegrille.h": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.cCompilerPath": "gcc",

@@ -1,11 +1,11 @@
 #include "display.h"
-#include "aaafiche.h"
-#include "aacible.h"
-#include "aacontours.h"
-#include "aagrille.h"
-#include "aajouer_coup.h"
-#include "aajouer_gagnant.h"
-#include "aamurs.h"
+#include "!afficheGrille.h"
+#include "!cible.h"
+#include "!contours.h"
+#include "!grilleEstetique.h"
+#include "!deplacement.h"
+#include "!classementGagnant.h"
+#include "!murs.h"
 
 
 void constructeurMurs(){
