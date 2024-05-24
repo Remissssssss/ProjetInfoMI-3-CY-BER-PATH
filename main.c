@@ -62,7 +62,7 @@ int main()
     tab_point = malloc(nb_joueur * sizeof(int));
     if (tab_point == NULL)
     {
-        printf("erreur allocation de m%cmoire", 130);
+        printf("erreur allocation de mémoire");
         exit(3);
     }
     for (int i = 0; i < nb_joueur; i++)
@@ -75,13 +75,13 @@ int main()
         cible = malloc(sizeof(Point) * 18);
         if (cible == NULL)
         {
-            printf("erreur allocation de m%cmoire", 130); // 130=é
+            printf("erreur allocation de mémoire"); 
             exit(3);
         }
         robot = malloc(sizeof(Point) * nb_joueur);
         if (robot == NULL)
         {
-            printf("erreur allocation de m%cmoire", 130); // 130=é
+            printf("erreur allocation de mémoire"); 
             exit(3);
         }
         printf("largeur: %d\n", largeur);

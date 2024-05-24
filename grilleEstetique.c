@@ -15,13 +15,13 @@ void constructeurGrille(){
 // allocation de mémoire de la grille
     grille=malloc(sizeof(unsigned char*)*(2*hauteur+1));
     if (grille==NULL){
-        printf("erreur allocation de m%cmoire",130);
+        printf("erreur allocation de mémoire");
         exit(1);
     }
     for (int i=0; i<2*hauteur+1; i++){
         grille[i]=malloc(sizeof(unsigned char)*(2*largeur+1));
         if(grille[i]== NULL){
-            printf("erreur allocation de m%cmoire",130);
+            printf("erreur allocation de mémoire");
             exit(2);
         }
 
@@ -36,7 +36,7 @@ void constructeurGrille(){
             else if(j%2==0){
                 grille[i][j] = 197;           // 197= ┼
                 if(i%2!=0){ 
-                    grille[i][j]= 179;       // 179= ▒
+                    grille[i][j]= 179;       // 179= │
                 }
             }
             grille[0][j] = 205;             // 205= ═

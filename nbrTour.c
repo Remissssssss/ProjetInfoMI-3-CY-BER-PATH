@@ -26,7 +26,7 @@ int* info_joueurs(int nb_joueur,Point *cible, Point *robot, int nb_manche, int m
     afficheManche(nb_manche, manche);
     for(int i=0; i<nb_joueur; i++){
         tab[i]=rand()%18;
-        printf("Joueurs n%c %d est le robot: \033[91m%c\033[0m.\n Vous devez atteindre la cible \033[92m%c \033[0m\n",167, i+1,grille[robot[i].y][robot[i].x],grille[cible[tab[i]].y][cible[tab[i]].x]);
+        printf("Joueurs n° %d est le robot: \033[91m%c\033[0m.\n Vous devez atteindre la cible \033[92m%c \033[0m\n", i+1,grille[robot[i].y][robot[i].x],grille[cible[tab[i]].y][cible[tab[i]].x]);
         but[i].cible1.y=cible[tab[i]].y;
         but[i].cible1.x=cible[tab[i]].x;
     }

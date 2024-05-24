@@ -27,7 +27,7 @@ void classement(int* tab_coup, int nb_joueur){
     }
     printf("la partie est termine\n");
     for(int j=0; j<nb_joueur;j++){                      
-        printf("joueur %d %c %d point\n",j+1,133,tab_point[j]);
+        printf("joueur %d à %d point\n",j+1,tab_point[j]);
     }
 }
 
@@ -47,7 +47,7 @@ void gagnant(int nb_joueur){
         }
     }
     if(r==1){           // si 1 seule prsn a le max de pts alors c'est le gagant
-    printf("Le gagnant est le joueur n%c%d, avec %d points.\n",167,j+1,a); 
+    printf("Le gagnant est le joueur n°%d, avec %d points.\n",j+1,a); 
     } else {                        //  il y a donc égalité
         printf("égalité!\n"); 
 }

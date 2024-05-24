@@ -15,9 +15,10 @@ void deplacement(int* tab_coup, int nb_joueur,int joueur){
     char deplacement;
     int a;
     char w;
+    int g=0;
     w=grille[but[joueur].robot1.y][but[joueur].robot1.x];
     R=grille[but[joueur].robot1.y][but[joueur].robot1.x];
-    printf("\n \n                                tour du joueur n%c%d\n\n",167,joueur+1); // les espaces sont fait pour l'éstétiques
+    printf("\n \n                                tour du joueur n°%d\n\n",joueur+1); // les espaces sont fait pour l'éstétiques
     for (int j=tab_coup[joueur]; j>0; j--){
         printf("vous avez %d coups\n",j);
         do{
@@ -36,6 +37,7 @@ void deplacement(int* tab_coup, int nb_joueur,int joueur){
                     grille[but[joueur].robot1.y][but[joueur].robot1.x] =c;
                     but[joueur].robot1.y=but[joueur].robot1.y -a+1;
                     a=hauteur*2+1;
+                    g++;
                 }
             }
         }
@@ -49,6 +51,7 @@ void deplacement(int* tab_coup, int nb_joueur,int joueur){
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;
                     but[joueur].robot1.x = but[joueur].robot1.x-a+1;
                     a=largeur*2+1;
+                    g++;
                 }
             }
         }
@@ -62,6 +65,7 @@ void deplacement(int* tab_coup, int nb_joueur,int joueur){
                     grille[ but[joueur].robot1.y][but[joueur].robot1.x]=c;
                     but[joueur].robot1.y=but[joueur].robot1.y+a-1;
                     a=hauteur*2+1;
+                    g++;
                 }
             }
         }
@@ -75,15 +79,22 @@ void deplacement(int* tab_coup, int nb_joueur,int joueur){
                     grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]=c;
                     but[joueur].robot1.x=but[joueur].robot1.x +a-1;
                     a=largeur*2-1;
+                    g++;
                 }
             }
         }
         afficheGrille();
-        if(grille[but[joueur].cible1.y][but[joueur].cible1.x]==w){
-            printf("le robot %c est sur la cible, vous gagner 1 point.\n",grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
-            tab_point[joueur]++;
+        if(grille[but[joueur].cible1.y][but[joueur].cible1.x]==w && g==tab_coup[joueur]){
+            printf("le robot %c est sur la cible, vous gagnez 2 points.\n",grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
+            tab_point[joueur]+=2;
             return ;
         }
+        else if( grille[but[joueur].cible1.y][but[joueur].cible1.x]==w && g!=tab_coup[joueur]){
+        printf("le robot %c est sur la cible, vous perdez 1 point.\n",grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
+            tab_point[joueur]--;
+            return ;
+        
+      }
     }
       //on n'a pas besoin de conditions if car si on sort de la boucle juste au dessus l'utilisateur n'a pas gagner de pts
       printf("le robot %c n'est pas sur la cible,donc pas de point.\n", grille[ but[joueur].robot1.y ][ but[joueur].robot1.x]);
