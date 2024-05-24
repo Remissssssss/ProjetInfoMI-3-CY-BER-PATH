@@ -27,7 +27,7 @@ extern int premier_joueur;
 
 int meilleur_scan(char * message, int min);
 
-int* info_joueurs(int nb_joueur,Point *cible, Point *robot);
+int* info_joueurs(int nb_joueur,Point *cible, Point *robot, int nb_manche, int manche);
 
 
 #endif 
