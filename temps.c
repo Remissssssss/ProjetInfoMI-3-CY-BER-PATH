@@ -51,13 +51,13 @@ int horloge(int difficulte)
         break;
 
     case (3):
-        tempsPasse = 5;
+        tempsPasse = 30;
         break;
     }
 
     while (tempsPasse >= 0)
     {
-        if (tempsPasse % 5 == 0)
+        if (tempsPasse % 10 == 0)
         {
             printf("Temps restant : %d secondes\n", tempsPasse);
         }
