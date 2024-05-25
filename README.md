@@ -25,7 +25,7 @@ Ce projet est un jeu de labyrinthe interactif où les joueurs contrôlent des ro
 ## Utilisation
 
 ### Configuration initiale :
-- Aller dans Terminal => modifier l'encodage => Europe => ## IBM850
+- Aller dans Terminal => modifier l'encodage => Europe => IBM850
 - Lancer le programme.
 - Saisir le nombre de joueurs (minimum 2, maximum 8).
 - Saisir le nombre de manches à jouer.
