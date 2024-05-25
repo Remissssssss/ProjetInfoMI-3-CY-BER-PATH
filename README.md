@@ -53,4 +53,4 @@ Ce projet est un jeu de labyrinthe interactif où les joueurs contrôlent des ro
 ## Installation
 1. Clonez le dépôt sur votre machine locale :
    ```bash
- https://github.com/Remissssssss/ProjetInfoMI-3-CY-BER-PATH.git
+https://github.com/Remissssssss/ProjetInfoMI-3-CY-BER-PATH.git
