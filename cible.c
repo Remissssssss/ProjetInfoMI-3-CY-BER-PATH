@@ -21,7 +21,7 @@ char constructeurCible(int i, int max, Point *cible)
     cible[i].x = rand() % (largeur * 2 - 1) + 1;
     cible[i].y = rand() % (hauteur * 2 - 1) + 1;
 
-    // Vérifier si les coordonnées générées sont valides
+    // Vérifier si les coordonnées générées sont valides (pour pas être sur le cadriage blanc)
     if (cible[i].x % 2 == 0 || cible[i].y % 2 == 0 || cible[i].y == 1 || cible[i].x == 1 || 
         cible[i].y == 2 * hauteur - 1 || cible[i].x == 2 * largeur - 1 || 
         ('a' <= grille[cible[i].y][cible[i].x] && grille[cible[i].y][cible[i].x] <= 'z') || 
@@ -31,7 +31,7 @@ char constructeurCible(int i, int max, Point *cible)
         return constructeurCible(i, max, cible);
     }
 
-    // Vérifier les conditions supplémentaires de validité des coordonnées
+    // Vérifier les conditions supplémentaires de validité des coordonnées (pour pas être sur des murs horizontal)
     if (grille[cible[i].y - 1][cible[i].x - 2] == 205 || grille[cible[i].y - 1][cible[i].x + 2] == 205 || 
         grille[cible[i].y + 1][cible[i].x + 2] == 205 || grille[cible[i].y + 1][cible[i].x - 2] == 205 || 
         ('a' <= grille[cible[i].y][cible[i].x] && grille[cible[i].y][cible[i].x] <= 'z') || 
@@ -41,7 +41,7 @@ char constructeurCible(int i, int max, Point *cible)
         return constructeurCible(i, max, cible);
     }
 
-    // Vérifier les conditions supplémentaires de validité des coordonnées
+    // Vérifier les conditions supplémentaires de validité des coordonnées (pour pas être sur des murs verticaux)
     if (grille[cible[i].y - 2][cible[i].x - 1] == 186 || grille[cible[i].y - 2][cible[i].x + 1] == 186 || 
         grille[cible[i].y + 2][cible[i].x + 1] == 186 || grille[cible[i].y + 2][cible[i].x - 1] == 186 || 
         ('a' <= grille[cible[i].y][cible[i].x] && grille[cible[i].y][cible[i].x] <= 'z') || 
@@ -51,7 +51,7 @@ char constructeurCible(int i, int max, Point *cible)
         return constructeurCible(i, max, cible);
     }
 
-    // Vérifier les conditions supplémentaires de validité des coordonnées pour les caractères de A à z
+    // Vérifier les conditions supplémentaires de validité des coordonnées pour les caractères de A à z (pour avoir une moins une case d'écart par rapport au autre cibles/robots)
     for (int j = 65; j < 115; j++)
     {
         if (grille[cible[i].y - 2][cible[i].x] == j || grille[cible[i].y + 2][cible[i].x] == j || 
@@ -59,7 +59,7 @@ char constructeurCible(int i, int max, Point *cible)
             grille[cible[i].y - 2][cible[i].x - 2] == j || grille[cible[i].y - 2][cible[i].x + 2] == j || 
             grille[cible[i].y + 2][cible[i].x - 2] == j || grille[cible[i].y + 2][cible[i].x + 2] == j)
         {
-            // Si les coordonnées ne sont pas valides, rappeler la fonction récursivement
+            // Si les coordonnées ne sont pas valides, rappeler la fonction récursivement 
             return constructeurCible(i, max, cible);
         }
     }
