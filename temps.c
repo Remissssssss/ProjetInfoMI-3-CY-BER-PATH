@@ -10,7 +10,7 @@ void afficheManche(int nb_manche, int manche)
     }
 }
 
-int difficulte()
+int difficulte() // Demande le niveau de difficulte que veut l'utilisateur
 {
     int diff;
     do
@@ -25,9 +25,7 @@ int difficulte()
     return diff;
 }
 
-// Intervale en secondes
-
-int horloge(int difficulte)
+int horloge(int difficulte) // Affiche l'heure tout le temps
 {
     int tempsPasse;
     switch (difficulte)
@@ -57,7 +55,7 @@ int horloge(int difficulte)
     printf("Temps écoulé !\n");
 }
 
-int cacherGrille()
+int cacherGrille() // Rafaichie le terminal et met le nom du jeu
 {
     system("clear");
 
