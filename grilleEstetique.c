@@ -1,5 +1,9 @@
 #include "display.h"
 
+/**
+ * @brief Construit la grille de jeu avec des éléments esthétiques.
+ */
+
 void constructeurGrille()
 {
     largeur = rand() % 6 + 15;
@@ -54,7 +58,14 @@ void constructeurGrille()
     grille[hauteur * 2][2 * largeur] = 188; // 188= ╝
 }
 
-// permet d'avoir des coins pour les murs
+/**
+ * @brief Ajuste les coins de la grille pour les rendre esthétiques.
+ *
+ * @param i La ligne actuelle de la grille.
+ * @param j La colonne actuelle de la grille.
+ */
+
+
 void estetiqueCoin(int i, int j)
 {
     if (grille[i][j] == 186)

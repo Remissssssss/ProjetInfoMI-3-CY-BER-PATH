@@ -1,6 +1,13 @@
 #include "display.h"
 #include "!deplacement.h"
 
+/**
+ * @brief Classe les joueurs en fonction de leur nombre de coups.
+ *
+ * @param tab_coup Tableau contenant le nombre de coups pour chaque joueur.
+ * @param nb_joueur Nombre de joueurs.
+ */
+
 
 void classement(int *tab_coup, int nb_joueur)
 {
@@ -30,6 +37,12 @@ void classement(int *tab_coup, int nb_joueur)
         printf("joueur %d à %d point\n", j + 1, tab_point[j]);
     }
 }
+
+/**
+ * @brief Détermine le gagnant parmi les joueurs en fonction de leurs points.
+ *
+ * @param nb_joueur Nombre de joueurs.
+ */
 
 void gagnant(int nb_joueur)
 {

@@ -1,5 +1,9 @@
 #include "display.h"
 
+/**
+ * @brief Construit les murs dans la grille.
+ */
+
 void constructeurMurs()
 {
     int a;

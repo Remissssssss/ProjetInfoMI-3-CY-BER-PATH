@@ -1,5 +1,14 @@
 #include "display.h"
 
+/**
+ * @brief Construit les cibles de jeu.
+ *
+ * @param i L'index de la cible actuelle.
+ * @param max Le nombre maximum de cibles.
+ * @param cible Le tableau des cibles à remplir.
+ * @return 0 si la construction est terminée, sinon appelle récursivement la fonction.
+ */
+
 char constructeurCible(int i, int max, Point *cible)
 {
     if (i == max)

@@ -2,6 +2,10 @@
 #include "!grilleEstetique.h"
 
 
+/**
+ * @brief Affiche la grille de jeu.
+ */
+
 void afficheGrille()
 { // écrire la grille
     for (int i = 0; i < 2 * hauteur + 1; i++)

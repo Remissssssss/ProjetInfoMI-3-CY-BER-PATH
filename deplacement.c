@@ -1,5 +1,12 @@
 #include "display.h"
 #include "!afficheGrille.h"
+/**
+ * @brief Gère le déplacement des robots pour chaque joueur.
+ *
+ * @param tab_coup Tableau contenant le nombre de coups pour chaque joueur.
+ * @param nb_joueur Nombre de joueurs.
+ * @param joueur Index du joueur actuel.
+ */
 
 void deplacement(int *tab_coup, int nb_joueur, int joueur)
 {

@@ -1,5 +1,8 @@
 #include "display.h"
 
+/**
+ * @brief Construit le contour de la grille.
+ */
 
 void consturcteurContour()
 {

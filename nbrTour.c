@@ -1,6 +1,17 @@
 #include "display.h"
 #include "!temps.h"
 
+/**
+ * @brief Collecte les informations des joueurs pour chaque manche.
+ *
+ * @param nb_joueur Nombre de joueurs.
+ * @param cible Tableau de points représentant les cibles.
+ * @param robot Tableau de points représentant les robots.
+ * @param nb_manche Nombre total de manches.
+ * @param manche Numéro de la manche actuelle.
+ * @return Tableau contenant le nombre de coups pour chaque joueur.
+ */
+
 int *info_joueurs(int nb_joueur, Point *cible, Point *robot, int nb_manche, int manche)
 {
     int choix_difficulte = difficulte();

@@ -8,12 +8,22 @@
 #include "!murs.h"
 #include "!temps.h"
 
+
+
 int *tab_point;
 unsigned char **grille;
 int largeur;
 int hauteur;
 But *but;
 int premier_joueur;
+
+/**
+ * @brief Scanne et valide une entrée utilisateur.
+ *
+ * @param message Le message à afficher à l'utilisateur.
+ * @param min La valeur minimale acceptable.
+ * @return La valeur scannée et validée.
+ */
 
 int meilleur_scan(char *message, int min)
 {
