@@ -1,16 +1,6 @@
 #include "display.h"
-#include "!afficheGrille.h"
-#include "!cible.h"
-#include "!contours.h"
-#include "!grilleEstetique.h"
-#include "!deplacement.h"
-#include "!classementGagnant.h"
-#include "!murs.h"
-/**
- * @brief
- *
- * @param nb_manche
- */
+
+
 void afficheManche(int nb_manche, int manche)
 { // Affiche les manches tout le temps
     printf("Manche %d/%d\n", manche, nb_manche);
@@ -69,11 +59,8 @@ int horloge(int difficulte)
 
 int cacherGrille()
 {
-    for (int i = 0; i <500; i++)
-    {
-        printf("\n");
-    }
-    
+    system("clear");
+
     printf("   ____ __     __           ____  ______ _____             _____     _______ _    _ \n");
     printf("  / ____\\ \\   / /          |  _ \\|  ____|  __ \\           |  __ \\ /\\|__   __| |  | |\n");
     printf(" | |     \\ \\_/ /   ______  | |_) | |__  | |__) |  ______  | |__) /  \\  | |  | |__| |\n");
@@ -81,6 +68,4 @@ int cacherGrille()
     printf(" | |____   | |             | |_) | |____| | \\ \\           | |  / ____ \\| |  | |  | |\n");
     printf("  \\_____|  |_|             |____/|______|_|  \\_\\          |_| /_/    \\_\\_|  |_|  |_|\n");
     printf("\n");
-
-     
 }
