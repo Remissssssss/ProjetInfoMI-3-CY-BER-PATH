@@ -48,7 +48,7 @@ Ce projet est un jeu de labyrinthe interactif où les joueurs contrôlent des ro
 ## Auteurs
 - **Développeur 1** : Archi Adame
 - **Développeur 2** : Saouli Rémi
-- **Développeur 2** : Vetier Guirec
+- **Développeur 3** : Vetier Guirec
 
 ## Installation
 1. Clonez le dépôt sur votre machine locale :
