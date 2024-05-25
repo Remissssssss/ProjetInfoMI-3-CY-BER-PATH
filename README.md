@@ -1,4 +1,4 @@
-# Projet : CY - BER - PATH
+# Projet : CY-BER-PATH
 
 ## Description
 Ce projet est un jeu de labyrinthe interactif où les joueurs contrôlent des robots pour atteindre des cibles dans une grille générée aléatoirement. Le jeu comporte plusieurs manches et offre différents niveaux de difficulté. Le joueur avec le plus de points à la fin du jeu est déclaré gagnant.
