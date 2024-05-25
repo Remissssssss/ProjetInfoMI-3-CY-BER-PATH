@@ -1,8 +1,15 @@
 #include "display.h"
 
 
+/**
+ * @brief Affiche le numéro de la manche actuelle et le nombre total de manches a chaque manche.
+ *
+ * @param nb_manche Nombre total de manches.
+ * @param manche Numéro de la manche actuelle.
+ */
+
 void afficheManche(int nb_manche, int manche)
-{ // Affiche les manches tout le temps
+{ 
     printf("Manche %d/%d\n", manche, nb_manche);
     if (manche == nb_manche)
     {
@@ -10,7 +17,14 @@ void afficheManche(int nb_manche, int manche)
     }
 }
 
-int difficulte() // Demande le niveau de difficulte que veut l'utilisateur
+
+/**
+ * @brief Demande à l'utilisateur de choisir le niveau de difficulté.
+ *
+ * @return Le niveau de difficulté choisi (1: Facile, 2: Moyen, 3: Difficile).
+ */
+
+int difficulte()
 {
     int diff;
     do
@@ -25,7 +39,14 @@ int difficulte() // Demande le niveau de difficulte que veut l'utilisateur
     return diff;
 }
 
-int horloge(int difficulte) // Affiche l'heure tout le temps
+/**
+ * @brief Démarre une horloge avec une durée déterminée par le niveau de difficulté.
+ *
+ * @param difficulte Le niveau de difficulté choisi.
+ * @return Le temps passé en secondes.
+ */
+
+int horloge(int difficulte)
 {
     int tempsPasse;
     switch (difficulte)
@@ -55,7 +76,14 @@ int horloge(int difficulte) // Affiche l'heure tout le temps
     printf("Temps écoulé !\n");
 }
 
-int cacherGrille() // Rafaichie le terminal et met le nom du jeu
+
+/**
+ * @brief Efface la grille de l'écran et affiche le nom du jeu.
+ *
+ * @return Un entier représentant l'état d'exécution.
+ */
+
+int cacherGrille()
 {
     system("clear");
 

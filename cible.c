@@ -67,11 +67,11 @@ char constructeurCible(int i, int max, Point *cible)
     // Si max est 18, assigner une lettre minuscule à la grille, sinon une lettre majuscule
     if (max == 18)
     {
-        grille[cible[i].y][cible[i].x] = 97 + i;
+        grille[cible[i].y][cible[i].x] = 97 + i; // 97= a
     }
     else
     {
-        grille[cible[i].y][cible[i].x] = 65 + i;
+        grille[cible[i].y][cible[i].x] = 65 + i; // 65= A
     }
 
     // Appeler récursivement la fonction pour l'index suivant

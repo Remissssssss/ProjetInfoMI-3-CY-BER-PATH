@@ -1,7 +1,7 @@
 #include "display.h"
 
 /**
- * @brief Construit le contour de la grille.
+ * @brief Construit le contour de la grille avec certain mur aléatoire.
  */
 
 void consturcteurContour()

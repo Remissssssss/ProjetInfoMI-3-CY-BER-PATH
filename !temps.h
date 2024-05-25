@@ -6,4 +6,5 @@ int difficulte();
 int horloge(int difficulte);
 int cacherGrille();
 int afficheManche(int nb_manche, int manche);
+
 #endif

@@ -2,7 +2,7 @@
 #include "!temps.h"
 
 /**
- * @brief Collecte les informations des joueurs pour chaque manche.
+ * @brief Collecte les informations des joueurs pour chaque manche, et trouve le premier joueurs a joué.
  *
  * @param nb_joueur Nombre de joueurs.
  * @param cible Tableau de points représentant les cibles.
@@ -39,8 +39,6 @@ int *info_joueurs(int nb_joueur, Point *cible, Point *robot, int nb_manche, int 
     }
     horloge(choix_difficulte);
     cacherGrille();
-    // mettre la fonction chronomètre et changer le printf dans la fonction au dessus;
-    // fonction pour suprimer les printf;
     for (int i = 0; i < nb_joueur; i++)
     {
         int nbr_tour;

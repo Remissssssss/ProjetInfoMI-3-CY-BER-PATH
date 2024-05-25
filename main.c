@@ -104,8 +104,6 @@ int main()
         afficheGrille();
         int *tab_coup = info_joueurs(nb_joueur, cible, robot, nb_manche, i + 1);
         afficheGrille();
-        // printf("%d",premier_joueur);
-        // printf("\n%c   %c\n",grille[but[0].robot1.y][but[0].robot1.x],grille[but[0].cible1.y][but[0].cible1.x]);
         classement(tab_coup, nb_joueur);
         free(grille);
         free(robot);

@@ -1,7 +1,7 @@
 #include "display.h"
 #include "!afficheGrille.h"
 /**
- * @brief Gère le déplacement des robots pour chaque joueur.
+ * @brief Gère le déplacement des robots pour chaque joueur et indique si le joeurs a gagné ou perdu des pts.
  *
  * @param tab_coup Tableau contenant le nombre de coups pour chaque joueur.
  * @param nb_joueur Nombre de joueurs.
@@ -129,7 +129,7 @@ void deplacement(int *tab_coup, int nb_joueur, int joueur)
     {
         if (i != joueur)
         {
-            tab_point[i]++;
+            tab_point[i]++;   // permet de donner les points aux autres joueurs
         }
     }
 }

@@ -1,7 +1,7 @@
 #include "display.h"
 
 /**
- * @brief Construit la grille de jeu avec des éléments esthétiques.
+ * @brief Construit la grille de jeu avec des éléments de la table ascii.
  */
 
 void constructeurGrille()
