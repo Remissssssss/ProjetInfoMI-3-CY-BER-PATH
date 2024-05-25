@@ -32,6 +32,7 @@ int meilleur_scan(char *message, int min)
 
 int main()
 {
+    system("clear");
     srand(time(NULL));
     Point *cible;
     Point *robot;
