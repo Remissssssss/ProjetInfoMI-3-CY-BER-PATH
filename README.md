@@ -25,4 +25,4 @@ Ce projet est un jeu de labyrinthe où les joueurs contrôlent des robots pour a
 ## Installation
 1. Clonez le dépôt sur votre machine locale :
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-depot.git
+   https://github.com/Remissssssss/ProjetInfoMI-3-CY-BER-PATH
