@@ -22,6 +22,32 @@ Ce projet est un jeu de labyrinthe interactif où les joueurs contrôlent des ro
 - `temps.c` : Gestion du chronomètre et des niveaux de difficulté.
 - `nbrTour.c` : Gère les informations des joueurs et le nombre de tours.
 
+## Utilisation
+Configuration initiale :
+Lancer le programme.
+Saisir le nombre de joueurs (minimum 2, maximum 8).
+Saisir le nombre de manches à jouer.
+Contrôle des robots :
+Utiliser les touches Z (haut), Q (gauche), S (bas), D (droite) pour déplacer les robots.
+Atteindre les cibles avec le moins de coups possible.
+Déroulement du jeu :
+La grille est affichée à chaque manche.
+Les joueurs déplacent leurs robots tour à tour.
+Les scores sont calculés et affichés après chaque manche.
+Fin de la partie :
+Le joueur avec le plus de points après toutes les manches est déclaré gagnant.
+Contribution
+Les contributions sont les bienvenues ! Pour contribuer :
+
+Forker le dépôt.
+Créer une branche pour votre fonctionnalité (git checkout -b nouvelle-fonctionnalité).
+Committer vos modifications (git commit -am 'Ajout d'une nouvelle fonctionnalité').
+Pusher la branche (git push origin nouvelle-fonctionnalité).
+Créer une Pull Request.
+Auteurs
+Développeur 1 : Nom et Prénom
+Développeur 2 : Nom et Prénom
+
 ## Installation
 1. Clonez le dépôt sur votre machine locale :
    ```bash
