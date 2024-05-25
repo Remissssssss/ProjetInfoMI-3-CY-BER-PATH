@@ -12,8 +12,8 @@ void constructeurMurs()
     {
         for (int j = 0; j < 2 * largeur + 1; j++)
         {
-            if (grille[i][j] >= 65 && grille[i][j] <= 122)
-            { // 65= A , 122= z
+            if (grille[i][j] >= 97 && grille[i][j] <= 122)
+            { // 97= a , 122= z
                 a = rand() % 2;
                 b = rand() % 2;
                 if (a == 0)
